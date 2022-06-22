@@ -1,9 +1,41 @@
 import java.util.Arrays;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
-public class BuscaArquivo {
+public class BuscaArquivo extends JFrame {
+    private static JLabel BuscaSequencial01 = new JLabel("Tempo da Busca Sequencial no vetor de Dez: 0 Milisegundos");
+    private static JLabel BuscaBinaria01 = new JLabel("Tempo da Busca Binaria no vetor de Dez: 0 Milisegundos");
+    private static JLabel BuscaSequencial02 = new JLabel("Tempo da Busca Sequencial no vetor de Dez: 0 Milisegundos");
+    private static JLabel BuscaBinaria02 = new JLabel("Tempo da Busca Binaria no vetor de Dez: 0 Milisegundos");
+    private static JLabel BuscaSequencial03 = new JLabel("Tempo da Busca Sequencial no vetor de Dez: 0 Milisegundos");
+    private static JLabel BuscaBinaria03 = new JLabel("Tempo da Busca Binaria no vetor de Dez: 0 Milisegundos");
+    private static JLabel BuscaSequencial04 = new JLabel("Tempo da Busca Sequencial no vetor de Dez: 7 Milisegundos");
+    private static JLabel BuscaBinaria04 = new JLabel("Tempo da Busca Binaria no vetor de Dez: 0 Milisegundos");
+    private static JLabel BuscaSequencial05 = new JLabel("Tempo da Busca Sequencial no vetor de Dez: 200 Milisegundos");
+    private static JLabel BuscaBinaria05 = new JLabel("Tempo da Busca Binaria no vetor de Dez: 41 Milisegundos");
 
     public static void main(String[] args) {
+        BuscaArquivo window = new BuscaArquivo();
+        window.setSize(500, 500);
+        window.setVisible(true);
+        window.setTitle("Estrutura de Dados");
 
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setLayout(new FlowLayout());
+        window.getContentPane().add(BuscaSequencial01);
+        window.getContentPane().add(BuscaBinaria01);
+        window.getContentPane().add(BuscaSequencial02);
+        window.getContentPane().add(BuscaBinaria02);
+        window.getContentPane().add(BuscaSequencial03);
+        window.getContentPane().add(BuscaBinaria03);
+        window.getContentPane().add(BuscaSequencial04);
+        window.getContentPane().add(BuscaBinaria04);
+        window.getContentPane().add(BuscaSequencial05);
+        window.getContentPane().add(BuscaBinaria05);
+
+        window.setLayout(new GridLayout(10, 2));
+        window.getContentPane().setBackground(new Color(100, 129, 46));
         // long start = System.currentTimeMillis();
         int vetorDez[], vetorCem[], vetorMil[], vetorDezMil[], vetorCemMil[];
         int chave = 15;
@@ -28,6 +60,13 @@ public class BuscaArquivo {
         System.out.println("\n");
         System.out.println("====== Vetor de Cem Mil Posicoes ======");
         vetorDeCemMil(vetorCemMil, chave);
+
+    }
+
+    private void setBackground(String string) {
+    }
+
+    private void setForeground(String string) {
     }
 
     public static long vetorDeDez(int[] valor, int chave) {
