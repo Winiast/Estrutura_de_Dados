@@ -35,7 +35,7 @@ public class BuscaArquivo extends JFrame {
         window.getContentPane().add(BuscaBinaria05);
 
         window.setLayout(new GridLayout(10, 2));
-        window.getContentPane().setBackground(new Color(100, 129, 46));
+        window.getContentPane().setBackground(new Color(100, 129, 200));
         // long start = System.currentTimeMillis();
         int vetorDez[], vetorCem[], vetorMil[], vetorDezMil[], vetorCemMil[];
         int chave = 15;
